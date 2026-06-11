@@ -962,3 +962,22 @@ footer{
     width: 80%;
     max-width: 900px;
 }
+
+.video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.video-modal video {
+    width: 80%;
+    max-width: 900px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
