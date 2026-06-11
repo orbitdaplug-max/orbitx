@@ -976,6 +976,8 @@ footer{
 .video-modal video {
     width: 80%;
     max-width: 900px;
+    height: auto;
+    display: block;
 }
 
 body.modal-open {
