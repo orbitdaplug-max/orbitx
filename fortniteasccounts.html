@@ -2,54 +2,78 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Fortnite Accounts - OrbitX</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet"
+href="style.css">
 
-<script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
+<link rel="icon"
+type="image/png"
+href="images/favicon.png">
+
+<script src="https://kit.fontawesome.com/7a4b62b0a4.js"
+crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
 <nav>
 
-<a href="home.html" class="logo-section">
-<img src="images/logo.png" alt="OrbitX Logo">
+<a href="home.html"
+class="logo-section">
+
+<img src="images/logo.png">
 
 <div>
 <h2>OrbitX</h2>
 </div>
+
 </a>
 
 <div class="nav-links">
-<a href="home.html">Home</a>
+
+<a href="index.html">Home</a>
+
 <a href="airpods.html">Apple</a>
+
 <a href="clothes.html">Clothes</a>
+
 <a href="cologne.html">Cologne</a>
+
 <a href="fortniteaccounts.html">Fortnite Accounts</a>
+
 </div>
 
 <div class="icons">
+
 <i class="fas fa-search"></i>
 <i class="fas fa-shopping-cart"></i>
+
 </div>
 
 </nav>
 
 <section class="hero small-hero">
-<h1>Fortnite Accounts</h1>
+
+<h1>FORTNITE ACCOUNTS</h1>
+
 <span>STACKED, OG & EMAIL-CHANGEABLE ACCOUNTS</span>
+
 </section>
 
 <section class="featured">
 
 <div class="product-container">
 
-<!-- PRODUCT 1 -->
+<!-- ONLY PRODUCT -->
+
 <div class="product-card">
 
 <video id="mainVideo" controls>
@@ -57,67 +81,23 @@
 Your browser does not support the video tag.
 </video>
 
-<h3>81 SKINS (OG STACKED ACCOUNT)</h3>
+<h3>81 SKINS OG STACKED ACCOUNT</h3>
 
-<div class="stock">LUXURY</div>
+<div class="stock">
+LUXURY
+</div>
 
 <p>$35</p>
 
-<button onclick="openPreview()">Preview</button>
+<button onclick="openPreview()">PREVIEW</button>
 
-<a href="https://buy.stripe.com/aFabJ09wu7WL2G37jhe3e03" target="_blank">
-<button>BUY NOW</button>
-</a>
+<a href="https://buy.stripe.com/aFabJ09wu7WL2G37jhe3e03"
+target="_blank">
 
-</div>
+<button>
+BUY NOW
+</button>
 
-<!-- PRODUCT 2 -->
-<div class="product-card">
-
-<img src="images/account2.png" alt="Fortnite Account 2">
-
-<h3>50+ SKINS ACCOUNT</h3>
-
-<div class="stock">LIMITED</div>
-
-<p>$25</p>
-
-<a href="https://buy.stripe.com/3cI6oG242fpd94r0UTe3e02" target="_blank">
-<button>BUY NOW</button>
-</a>
-
-</div>
-
-<!-- PRODUCT 3 -->
-<div class="product-card">
-
-<img src="images/account3.png" alt="Fortnite Account 3">
-
-<h3>OG SKINS ACCOUNT</h3>
-
-<div class="stock">RARE</div>
-
-<p>$40</p>
-
-<a href="https://buy.stripe.com/eVq9AS5ge1yndkHfPNe3e01" target="_blank">
-<button>BUY NOW</button>
-</a>
-
-</div>
-
-<!-- PRODUCT 4 -->
-<div class="product-card">
-
-<img src="images/account4.png" alt="Fortnite Account 4">
-
-<h3>STACKED ACCOUNT</h3>
-
-<div class="stock">HOT</div>
-
-<p>$30</p>
-
-<a href="https://buy.stripe.com/28E7sKeQO7WL6Wj9rpe3e00" target="_blank">
-<button>BUY NOW</button>
 </a>
 
 </div>
@@ -127,16 +107,27 @@ Your browser does not support the video tag.
 </section>
 
 <footer>
-<p>© 2026 OrbitX All Rights Reserved.</p>
+
+<p>
+© 2026 OrbitX.
+All Rights Reserved.
+</p>
+
 </footer>
 
-<!-- MODAL -->
+<!-- PREVIEW MODAL -->
 <div id="videoModal" class="video-modal">
-    <span class="close-modal" onclick="closePreview()">&times;</span>
-    <video id="modalVideo" controls></video>
+
+<span onclick="closePreview()" style="cursor:pointer; position:absolute; top:20px; right:30px; font-size:40px; color:white;">
+&times;
+</span>
+
+<video id="modalVideo" controls></video>
+
 </div>
 
 <script>
+
 function openPreview() {
     const modal = document.getElementById("videoModal");
     const mainVideo = document.getElementById("mainVideo");
@@ -144,9 +135,7 @@ function openPreview() {
 
     modal.style.display = "flex";
 
-    const source = mainVideo.querySelector("source").src;
-    modalVideo.src = source;
-
+    modalVideo.src = mainVideo.querySelector("source").src;
     modalVideo.play();
 }
 
@@ -158,6 +147,7 @@ function closePreview() {
     modalVideo.pause();
     modalVideo.src = "";
 }
+
 </script>
 
 </body>
