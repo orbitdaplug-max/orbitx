@@ -27,15 +27,10 @@
 
 <div class="nav-links">
 <a href="home.html">Home</a>
-  
 <a href="airpods.html">Apple</a>
-  
 <a href="clothes.html">Clothes</a>
-  
-<a href="cologne.html">Cologne</a> 
-  
+<a href="cologne.html">Cologne</a>
 <a href="fortniteaccounts.html">Fortnite Accounts</a>
-  
 </div>
 
 <div class="icons">
@@ -57,7 +52,7 @@
 <!-- PRODUCT 1 -->
 <div class="product-card">
 
-<video controls>
+<video id="mainVideo" controls>
 <source src="images/Screen Recording 2026-06-11 125331 (1).mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -67,6 +62,8 @@ Your browser does not support the video tag.
 <div class="stock">LUXURY</div>
 
 <p>$35</p>
+
+<button onclick="openPreview()">Preview</button>
 
 <a href="https://buy.stripe.com/aFabJ09wu7WL2G37jhe3e03" target="_blank">
 <button>BUY NOW</button>
@@ -133,7 +130,35 @@ Your browser does not support the video tag.
 <p>© 2026 OrbitX All Rights Reserved.</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- MODAL -->
+<div id="videoModal" class="video-modal">
+    <span class="close-modal" onclick="closePreview()">&times;</span>
+    <video id="modalVideo" controls></video>
+</div>
+
+<script>
+function openPreview() {
+    const modal = document.getElementById("videoModal");
+    const mainVideo = document.getElementById("mainVideo");
+    const modalVideo = document.getElementById("modalVideo");
+
+    modal.style.display = "flex";
+
+    const source = mainVideo.querySelector("source").src;
+    modalVideo.src = source;
+
+    modalVideo.play();
+}
+
+function closePreview() {
+    const modal = document.getElementById("videoModal");
+    const modalVideo = document.getElementById("modalVideo");
+
+    modal.style.display = "none";
+    modalVideo.pause();
+    modalVideo.src = "";
+}
+</script>
 
 </body>
 </html>
