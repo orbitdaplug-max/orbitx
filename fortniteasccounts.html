@@ -29,7 +29,7 @@ crossorigin="anonymous"></script>
 <a href="home.html"
 class="logo-section">
 
-<img src="images/logo.png">
+<img src="images/logo.png" alt="OrbitX Logo">
 
 <div>
 <h2>OrbitX</h2>
@@ -72,21 +72,25 @@ class="logo-section">
 
 <div class="product-container">
 
-<!-- ONLY PRODUCT -->
-
 <div class="product-card">
 
-<img src="images/take-the-L.png">
+<img src="images/take-the-L.png" alt="81 Skins Account">
 
-<h3>81 SKINS, Take The L</h3>
+<h3>81 SKINS, TAKE THE L</h3>
 
 <div class="stock">
- 
+AVAILABLE
 </div>
 
 <p>$35</p>
 
-<button onclick="openPreview()">PREVIEW</button>
+<a href="account81.html">
+
+<button>
+PREVIEW
+</button>
+
+</a>
 
 <a href="https://buy.stripe.com/aFabJ09wu7WL2G37jhe3e03"
 target="_blank">
@@ -112,40 +116,8 @@ All Rights Reserved.
 
 </footer>
 
-<!-- PREVIEW MODAL -->
-<div id="videoModal" class="video-modal">
-
-<span onclick="closePreview()" style="cursor:pointer; position:absolute; top:20px; right:30px; font-size:40px; color:white;">
-&times;
-</span>
-
-<video id="modalVideo" controls></video>
-
-</div>
-
-<script>
-
-function openPreview() {
-    const modal = document.getElementById("videoModal");
-    const mainVideo = document.getElementById("mainVideo");
-    const modalVideo = document.getElementById("modalVideo");
-
-    modal.style.display = "flex";
-
-    modalVideo.src = mainVideo.querySelector("source").src;
-    modalVideo.play();
-}
-
-function closePreview() {
-    const modal = document.getElementById("videoModal");
-    const modalVideo = document.getElementById("modalVideo");
-
-    modal.style.display = "none";
-    modalVideo.pause();
-    modalVideo.src = "";
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
