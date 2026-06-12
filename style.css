@@ -983,3 +983,17 @@ footer{
 body.modal-open {
     overflow: hidden;
 }
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card a {
+    width: 100%;
+}
+
+.product-card button {
+    width: 100%;
+    margin-top: 10px;
+}
