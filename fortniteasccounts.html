@@ -24,10 +24,10 @@ crossorigin="anonymous"></script>
 
 <body>
 
+<!-- NAV -->
 <nav>
 
-<a href="home.html"
-class="logo-section">
+<a href="home.html" class="logo-section">
 
 <img src="images/logo.png" alt="OrbitX Logo">
 
@@ -40,13 +40,9 @@ class="logo-section">
 <div class="nav-links">
 
 <a href="index.html">Home</a>
-
 <a href="airpods.html">Apple</a>
-
 <a href="clothes.html">Clothes</a>
-
 <a href="cologne.html">Cologne</a>
-
 <a href="fortniteaccounts.html">Fortnite Accounts</a>
 
 </div>
@@ -60,6 +56,7 @@ class="logo-section">
 
 </nav>
 
+<!-- HERO -->
 <section class="hero small-hero">
 
 <h1>FORTNITE ACCOUNTS</h1>
@@ -68,6 +65,7 @@ class="logo-section">
 
 </section>
 
+<!-- PRODUCTS -->
 <section class="featured">
 
 <div class="product-container">
@@ -76,26 +74,14 @@ class="logo-section">
 
 <img src="images/take-the-L.png" alt="81 Skins Account">
 
-<h3>81 SKINS 
-TAKE THE L</h3>
+<h3>81 SKINS TAKE THE L</h3>
 
 <p>$35</p>
 
-<a href="account81.html">
+<button onclick="openPreview()">PREVIEW</button>
 
-<button>
-PREVIEW
-</button>
-
-</a>
-
-<a href="link"
-target="_blank">
-
-<button>
-BUY NOW
-</button>
-
+<a href="https://buy.stripe.com/aFabJ09wu7WL2G37jhe3e03" target="_blank">
+<button>BUY NOW</button>
 </a>
 
 </div>
@@ -104,17 +90,48 @@ BUY NOW
 
 </section>
 
+<!-- SIDE PREVIEW PANEL -->
+<div id="previewPanel" class="preview-panel">
+
+<div class="preview-header">
+<h2>Account Preview</h2>
+<span onclick="closePreview()" class="close-btn">&times;</span>
+</div>
+
+<img id="mainPreviewImg" src="images/take-the-L.png">
+
+<div class="thumbs">
+<img src="images/take-the-L.png" onclick="changeImg(this.src)">
+<img src="images/locker1.png" onclick="changeImg(this.src)">
+<img src="images/skins1.png" onclick="changeImg(this.src)">
+<img src="images/emotes1.png" onclick="changeImg(this.src)">
+</div>
+
+</div>
+
+<!-- FOOTER -->
 <footer>
 
-<p>
-© 2026 OrbitX.
-All Rights Reserved.
-</p>
+<p>© 2026 OrbitX. All Rights Reserved.</p>
 
 </footer>
 
-<script src="script.js"></script>
+<!-- SCRIPT -->
+<script>
+
+function openPreview(){
+    document.getElementById("previewPanel").style.right = "0";
+}
+
+function closePreview(){
+    document.getElementById("previewPanel").style.right = "-420px";
+}
+
+function changeImg(src){
+    document.getElementById("mainPreviewImg").src = src;
+}
+
+</script>
 
 </body>
-
 </html>
