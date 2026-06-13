@@ -992,3 +992,23 @@ footer{
 .thumbs img:hover{
     opacity:1;
 }
+
+.btn{
+    width:90%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(to right,#555,#bdbdbd);
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+
+    display:block;
+    margin:10px auto 0 auto;
+}
+
+.btn:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 25px silver;
+}
