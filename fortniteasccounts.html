@@ -4,21 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Fortnite Accounts - OrbitX</title>
 
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/favicon.png">
 
-<link rel="icon"
-type="image/png"
-href="images/favicon.png">
-
-<script src="https://kit.fontawesome.com/7a4b62b0a4.js"
-crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -28,7 +21,6 @@ crossorigin="anonymous"></script>
 <nav>
 
 <a href="home.html" class="logo-section">
-
 <img src="images/logo.png" alt="OrbitX Logo">
 
 <div>
@@ -38,24 +30,16 @@ crossorigin="anonymous"></script>
 </a>
 
 <div class="nav-links">
-
 <a href="index.html">Home</a>
-    
 <a href="airpods.html">Apple</a>
-    
 <a href="clothes.html">Clothes</a>
-    
 <a href="cologne.html">Cologne</a>
-    
 <a href="fortniteaccounts.html">Fortnite Accounts</a>
-
 </div>
 
 <div class="icons">
-
 <i class="fas fa-search"></i>
 <i class="fas fa-shopping-cart"></i>
-
 </div>
 
 </nav>
@@ -74,6 +58,7 @@ crossorigin="anonymous"></script>
 
 <div class="product-container">
 
+<!-- ACCOUNT 1 -->
 <div class="product-card">
 
 <img src="images/take-the-L.png" alt="81 Skins Account">
@@ -82,11 +67,46 @@ crossorigin="anonymous"></script>
 
 <p>$35</p>
 
-<button onclick="openPreview()" class="btn">
+<button class="btn"
+onclick="openPreview([
+'images/skins1.png',
+'images/backbling1.png',
+'images/emotes1.png',
+'images/exclusives1.png'
+])">
 PREVIEW
 </button>
 
-<button onclick="window.open('https://buy.stripe.com/aFabJ09wu7WL2G37jhe3e03', '_blank')" class="btn">
+<button
+onclick="window.open('https://buy.stripe.com/aFabJ09wu7WL2G37jhe3e03', '_blank')"
+class="btn">
+BUY NOW
+</button>
+
+</div>
+
+<!-- ACCOUNT 2 -->
+<div class="product-card">
+
+<img src="images/skins2.png" alt="112 Sweat Account">
+
+<h3>112 SWEAT ACCOUNT</h3>
+
+<p>$25</p>
+
+<button class="btn"
+onclick="openPreview([
+'images/skins2.png',
+'images/backbling2.png',
+'images/emotes2.png',
+'images/exclusives2.png'
+])">
+PREVIEW
+</button>
+
+<button
+onclick="window.open('placeholder', '_blank')"
+class="btn">
 BUY NOW
 </button>
 
@@ -96,7 +116,7 @@ BUY NOW
 
 </section>
 
-<!-- SIDE PREVIEW PANEL -->
+<!-- PREVIEW PANEL -->
 <div id="previewPanel" class="preview-panel">
 
 <div class="preview-header">
@@ -104,37 +124,50 @@ BUY NOW
 <span onclick="closePreview()" class="close-btn">&times;</span>
 </div>
 
-<img id="mainPreviewImg" src="images/take-the-L.png">
+<img id="mainPreviewImg" src="">
 
-<div class="thumbs">
-<img src="images/skins1.png" onclick="changeImg(this.src)">
-<img src="images/backbling1.png" onclick="changeImg(this.src)">
-<img src="images/emotes1.png" onclick="changeImg(this.src)">
-<img src="images/exclusives1.png" onclick="changeImg(this.src)">
-</div>
+<div class="thumbs" id="thumbsContainer"></div>
 
 </div>
 
 <!-- FOOTER -->
 <footer>
-
 <p>© 2026 OrbitX. All Rights Reserved.</p>
-
 </footer>
 
-<!-- SCRIPT -->
 <script>
 
-function openPreview(){
+function openPreview(images){
+
     document.getElementById("previewPanel").style.right = "0";
+
+    document.getElementById("mainPreviewImg").src = images[0];
+
+    let thumbs = document.getElementById("thumbsContainer");
+
+    thumbs.innerHTML = "";
+
+    images.forEach(img => {
+
+        thumbs.innerHTML += `
+            <img src="${img}"
+            onclick="changeImg('${img}')">
+        `;
+
+    });
+
 }
 
 function closePreview(){
+
     document.getElementById("previewPanel").style.right = "-420px";
+
 }
 
 function changeImg(src){
+
     document.getElementById("mainPreviewImg").src = src;
+
 }
 
 </script>
